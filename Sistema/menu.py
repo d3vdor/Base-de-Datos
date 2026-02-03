@@ -5,6 +5,7 @@ from time import sleep
 # funciones externas del programa 
 from alta import alta_usuario
 from baja import baja_usuario
+from mostrar_usuarios import mostrar_todos
 
 # Menu principal
 def menu_opciones():
@@ -28,6 +29,8 @@ def menu_opciones():
             print(lista_usuarios)
         elif (opc == 2):
             baja_usuario(lista_usuarios)
+        elif (opc == 3):
+            mostrar_todos(lista_usuarios)
         elif (opc == 5):
             print("Cerrando programa")
             sleep(3)

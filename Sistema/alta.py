@@ -12,9 +12,10 @@ def alta_usuario():
     print("\nEscibre los datos: ")
     id_user = generacion_id() 
     # .strip() elimina los espacios en blanco del inicio y del final
-    nombre = input("Nombre: ").strip()
-    ap = input("Apellido Paterno: ").strip()
-    am = input("Apellido Materno: ").strip()
+    # .capitalize() hace que la primera letra sea en mayuscula
+    nombre = input("Nombre: ").strip().capitalize()
+    ap = input("Apellido Paterno: ").strip().capitalize()
+    am = input("Apellido Materno: ").strip().capitalize()
     fn = input("Fecha de nacimiento: ").strip()
     dir = input("Direccion: ")
 
