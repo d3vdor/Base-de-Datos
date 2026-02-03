@@ -1,15 +1,17 @@
 from random import randint
+from os import system
 
 def generacion_id():
     id_user = randint(1,10000)
     return id_user
 
 def alta_usuario():
+    system("clear")
     # lista para nuevo usuario
     info = []
 
     # ingresar datos del usuario
-    print("\nEscibre los datos: ")
+    print("\nAlta usuario")
     id_user = generacion_id() 
     # .strip() elimina los espacios en blanco del inicio y del final
     # .capitalize() hace que la primera letra sea en mayuscula

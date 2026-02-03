@@ -1,4 +1,5 @@
 from mostrar_usuarios import mostrar_usuarios
+from time import sleep
 
 def elminar_usuario(id_user, lista):
     for i in range(len(lista)):
@@ -14,9 +15,10 @@ def baja_usuario(lista):
     nombre_buscar = input("Nombre a buscar: ")
     encontrado = mostrar_usuarios(lista, nombre_buscar)
 
-    try:
-        id_usuario = int(input("ID a eliminar: "))
-        elminar_usuario(id_usuario,lista)
-    except ValueError:
-        print("Error: el ID debe ser un numero entero")
+    if (encontrado):
+        try:
+            id_usuario = int(input("ID a eliminar: "))
+            elminar_usuario(id_usuario,lista)
+        except ValueError:
+            print("Error: el ID debe ser un numero entero")
 

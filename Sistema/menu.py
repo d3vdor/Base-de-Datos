@@ -9,6 +9,7 @@ from mostrar_usuarios import mostrar_todos
 
 # Menu principal
 def menu_opciones():
+    system("clear")
     # lista de los usuarios que se iran agregando
     lista_usuarios = []
     while (True):
