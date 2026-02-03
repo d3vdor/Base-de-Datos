@@ -1,5 +1,4 @@
-from mostrar_usuarios import mostrar_usuarios
-from time import sleep
+from utilidades import mostrar_usuarios
 
 def elminar_usuario(id_user, lista):
     for i in range(len(lista)):

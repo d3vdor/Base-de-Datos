@@ -1,5 +1,10 @@
+# funciones de python
 from random import randint
 from os import system
+
+# funciones del sistema
+from utilidades import validar_campo
+from utilidades import validar_fecha
 
 def generacion_id():
     id_user = randint(1,10000)
@@ -15,11 +20,11 @@ def alta_usuario():
     id_user = generacion_id() 
     # .strip() elimina los espacios en blanco del inicio y del final
     # .capitalize() hace que la primera letra sea en mayuscula
-    nombre = input("Nombre: ").strip().capitalize()
-    ap = input("Apellido Paterno: ").strip().capitalize()
-    am = input("Apellido Materno: ").strip().capitalize()
-    fn = input("Fecha de nacimiento: ").strip()
-    dir = input("Direccion: ")
+    nombre = validar_campo("Nombre: ",str,"String").strip().capitalize()
+    ap = validar_campo("Apellido Paterno: ",str,"String").strip().capitalize()
+    am = validar_campo("Apellido Materno: ",str,"String").strip().capitalize()
+    fn = validar_fecha("Fecha de nacimiento")
+    dir = validar_campo("Correo electronico: ",str,"String").strip().lower()
 
     # agreagr los datos del usuario a la lista
     info.append(id_user)
