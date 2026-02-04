@@ -1,7 +1,6 @@
 from menu import menu_opciones
 
 def run():
-    file = open("base_usuarios.txt",'w')
     menu_opciones()
 
 if __name__ == '__main__':

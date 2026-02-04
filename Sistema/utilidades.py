@@ -93,3 +93,34 @@ def mostrar_por_id(lista_usuario,id_user):
         print("Nombre de usuario no encontrado")       
 
 
+# guardar informacion en archvio .txt
+def guardar_archivo(lista_usuarios, nombre_archivo="usuarios.txt"):
+    try:
+        with open(nombre_archivo, "w") as archivo:
+            for u in lista_usuarios:
+                linea = f"{u[0]},{u[1]},{u[2]},{u[3]},{u[4].strftime('%d/%m/%Y')},{u[5]}\n"
+                archivo.write(linea)
+        print("Datos guardados correctamente.")
+    except Exception as e:
+        print(f"Error al guardar: {e}")
+
+# cargar el .txt
+def cargar_archivo(nombre_archivo="usuarios.txt"):
+    lista_temporal = []
+    try:
+        with open(nombre_archivo, "r") as archivo:
+            for linea in archivo:
+                datos = linea.strip().split(",")
+                if datos:
+                    id_bd = int(datos[0])
+                    nombre = datos[1]
+                    ap = datos[2]
+                    am = datos[3]
+                    fn = datetime.strptime(datos[4], "%d/%m/%Y")
+                    correo = datos[5]
+                    
+                    lista_temporal.append([id_bd, nombre, ap, am, fn, correo])
+    except FileNotFoundError:
+        # Si el archivo no existe, creamos uno vacío
+        open(nombre_archivo, "w").close()
+    return lista_temporal
