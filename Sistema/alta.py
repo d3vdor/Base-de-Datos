@@ -8,6 +8,10 @@ from utilidades import validar_fecha
 
 def generacion_id():
     id_user = randint(1,10000)
+
+    lista_ids = []
+
+    # Comprobar que id no sea repetido
     return id_user
 
 def alta_usuario():

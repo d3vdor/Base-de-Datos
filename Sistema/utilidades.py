@@ -1,6 +1,11 @@
 from datetime import datetime
 import os
 
+# Validar que id no sea repetido
+def validar_id(lista,id_user):
+    if ():
+        pass
+
 # Validar que la fecha de cumpleaños este bien escrita
 def validar_fecha(texto):
     while True:
