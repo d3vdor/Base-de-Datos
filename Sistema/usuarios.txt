@@ -1,2 +1,1 @@
-5235,Alejandro,Dominguez,Rojano,07/06/2002,omar@correo.com
-1043,Julieta,Huerta,Peres,07/06/2007,julieta@correo.com
+6589,Julieta,Huerta,Perez,08/06/2007,juju@uni.edu

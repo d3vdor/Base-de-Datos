@@ -1,4 +1,5 @@
 from utilidades import mostrar_usuarios
+from os import system
 
 def elminar_usuario(id_user, lista):
     for i in range(len(lista)):
@@ -7,9 +8,14 @@ def elminar_usuario(id_user, lista):
             print("Usuario eliminado")
             return True
         else:
-            print("Usuario no encontrado")
+            continue 
+
+    system("pause")
+    print("Presione Enter para continuar...")
+    system("clear")
 
 def baja_usuario(lista):
+    system('clear')
     # consultar los usuarios con el mismo nombre
     nombre_buscar = input("Nombre a buscar: ")
     encontrado = mostrar_usuarios(lista, nombre_buscar)
@@ -20,4 +26,6 @@ def baja_usuario(lista):
             elminar_usuario(id_usuario,lista)
         except ValueError:
             print("Error: el ID debe ser un numero entero")
-
+    system("pause")
+    print("Presione Enter para continuar...")
+    system("cls")

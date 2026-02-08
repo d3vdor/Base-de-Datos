@@ -34,6 +34,7 @@ def alta_usuario():
     info.append(fn)
     info.append(dir)
 
+    system("clear")
     # retornar la lista con el nuevo usuario
     return info
 

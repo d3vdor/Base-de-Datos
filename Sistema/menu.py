@@ -29,8 +29,7 @@ def menu_opciones():
         # opciones del menu
         if (opc == 1):
             nuevo_usuario = alta_usuario()
-            lista_usuarios.append(nuevo_usuario) # agrega el usuario a la lista de usuarios
-            print(lista_usuarios)
+            lista_usuarios.append(nuevo_usuario) # agrega el usuario a la lista de usuarios|
             guardar_archivo(lista_usuarios)
         elif (opc == 2):
             baja_usuario(lista_usuarios)
